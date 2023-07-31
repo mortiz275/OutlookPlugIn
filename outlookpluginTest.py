@@ -20,7 +20,7 @@ def is_ai_phishing(email_content):
 
 # Function to process received emails
 def process_received_emails():
-    outlook = win32com.client.Dispatch("Outlook.Application").GetNamespace("MAPI")
+    outlook = win32com.client.Dispatch("Outlook.Application").GetNamespace("MAPI") #Might need tweaking with this to accomodate for different machines
     inbox = outlook.GetDefaultFolder(6)  # 6 represents the Inbox folder
     
     for email in inbox.Items:
